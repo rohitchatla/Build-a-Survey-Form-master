@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+$font-family-headers : 'Open Sans', sans-serif;
+$font-family-text: 'Montserrat', sans-serif;
+$darker-color: hsl(17, 100%, 53%);
+$lighter-color: hsl(0,0,100%);
+
+%field-reset {
+  border: none;
+  outline: none;
+}
+%field-style {
+  font-size: 1.1rem;
+  font-family: $font-family-text;
+  padding: 0.5rem;
+  border-bottom: 1px solid darken($darker-color, 10%);
+  background-color: darken($lighter-color, 7%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $darker-color;
+  padding: 0 1rem;
+}
+.container-form {
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 1rem;
+  line-height: 2;
+  font-family: $font-family-text;
+  background-color: $lighter-color;
+  color: darken($darker-color, 40%);
+  box-shadow: -1px 0 5px darken($darker-color, 20%), 1px 0 5px darken($darker-color, 20%);
+
+  #title {
+    font-family: $font-family-headers;
+    text-transform: uppercase;
+  }
+  #description {
+    font-size: 1.2rem;
+    border-bottom: 1px solid darken($darker-color, 30%);
+    display: inline-block;
+  }
+  #survey-form {
+    font-size: 1.1rem;
+    .survey-item {
+      margin: 2rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      label {
+        padding: 0 0.5rem;
+        margin: 0.5rem 0;
+        border-left: 3px solid darken($darker-color, 10%);
+      }
+      input {
+        @extend %field-reset;
+        @extend %field-style;
+        align-self: flex-start;
+      }
+      select {
+        @extend %field-reset;
+        @extend %field-style;
+        align-self: flex-start;
+      }
+    }
+
+    fieldset {
+      border: 1px solid darken($darker-color, 10%);
+      padding: 0.5rem;
+      margin: 2.5rem 0;
+      legend {
+        border-left: 3px solid darken($darker-color, 10%);
+        padding: 0 0.5rem;
+      }
+    }
+    textarea {
+      @extend %field-reset;
+      @extend %field-style;
+      max-width: 100%;
+      min-height: 100px;
+      padding: 0.5rem;
+      resize: none;
+    }
+
+    #submit {
+      @extend %field-reset;
+      padding: 0.75rem 1rem;
+      color: $lighter-color;
+      background-color: darken($darker-color, 10%);
+      font-family: $font-family-headers;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: darken($darker-color, 5%);
+      }
+    }
+  }
+}
