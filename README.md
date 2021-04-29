@@ -37,6 +37,10 @@ There is not much space left for imagination in the creation of the project, but
 
 That being said, stylistic choices are still required for a readable font and color palette.
 
+### Deployed it to
+
+[https://rohitchatla.github.io/Build-a-Survey-Form-master/](https://rohitchatla.github.io/Build-a-Survey-Form-master/)
+
 <!-- # Lessons learned 
 
 ## HTML
