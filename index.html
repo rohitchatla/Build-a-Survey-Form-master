@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <title>Survey form</title>
-  <meta name="description" content="Project part of the FreeCodeCamp Beta curriculum: Applied Responsive Web Design Projects">
+    <title>Survey form</title>
+    <meta
+      name="description"
+      content="Project part of the FreeCodeCamp Beta curriculum: Applied Responsive Web Design Projects"
+    />
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
-  
-  <!--
+  <body>
+    <!--
   ## HTML Structure:
 
   .container-form wrapping the entire content
@@ -47,70 +49,124 @@
       input element
       label, for each element
   -->
+    <div class="flex-container">
+      <div class="container-form">
+        <!-- flex-container-form -->
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+          If you have the time, we would really appreciate your feedback.
+        </p>
 
-  <div class="container-form">
-    <h1 id="title">Survey Form</h1>
-    <p id="description">If you have the time, we would really appreciate your feedback.</p>
+        <form id="survey-form">
+          <div class="survey-item">
+            <label for="name" id="name-label"
+              ><span class="required">*</span>Name</label
+            >
+            <input type="text" id="name" placeholder="Mayank" required />
+          </div>
 
-    <form id="survey-form">
-      <div class="survey-item">
-        <label for="name" id="name-label"><span class="required">*</span>Name</label>
-        <input type="text" id="name" placeholder="Mayank" required>
+          <div class="survey-item">
+            <label for="email" id="email-label"
+              ><span class="required">*</span>Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="Mayank@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="survey-item">
+            <label for="number" id="number-label">Age</label>
+            <input
+              type="number"
+              id="number"
+              min="1"
+              max="135"
+              placeholder="45"
+            />
+          </div>
+
+          <div class="survey-item">
+            <label for="dropdown">Gender</label>
+            <select name="genders" id="dropdown">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="undeclared" selected>Undeclared</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Which operating system do you primarily use?</legend>
+            <input
+              id="radio-windows"
+              type="radio"
+              name="operating-system"
+              value="windows"
+            />
+            <label for="radio-windows">Windows</label><br />
+            <input
+              id="radio-mac"
+              type="radio"
+              name="operating-system"
+              value="mac"
+            />
+            <label for="radio-mac">Mac</label><br />
+            <input
+              id="radio-linux"
+              type="radio"
+              name="operating-system"
+              value="linux"
+            />
+            <label for="radio-linux">Linux</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Which devices do you use daily?</legend>
+            <input
+              id="device-mobile"
+              type="checkbox"
+              name="device"
+              value="mobile phone"
+            />
+            <label for="device-mobile">Mobile phone</label><br />
+            <input
+              id="device-tablet"
+              type="checkbox"
+              name="device"
+              value="tablet"
+            />
+            <label for="device-tablet">Tablet</label><br />
+            <input
+              id="device-laptop"
+              type="checkbox"
+              name="device"
+              value="laptop"
+            />
+            <label for="device-laptop">Laptop</label><br />
+            <input
+              id="device-pc"
+              type="checkbox"
+              name="device"
+              value="personal computer"
+            />
+            <label for="device-pc">Personal computer</label>
+          </fieldset>
+
+          <div class="survey-item">
+            <label for="comments" id="number-label"
+              >Want to add something?</label
+            >
+            <textarea
+              id="comments"
+              placeholder="Feel free to include any additional comment"
+            ></textarea>
+          </div>
+
+          <button id="submit">Submit</button>
+        </form>
       </div>
-
-      <div class="survey-item">
-        <label for="email" id="email-label"><span class="required">*</span>Email Address</label>
-        <input type="email" id="email" placeholder="Mayank@gmail.com" required>
-      </div>
-
-      <div class="survey-item">
-        <label for="number" id="number-label">Age</label>
-        <input type="number" id="number" min="1" max="135" placeholder="45">
-      </div>
-
-      <div class="survey-item">
-        <label for="dropdown">Gender</label>
-        <select name="genders" id="dropdown">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="undeclared" selected>Undeclared</option>
-        </select>
-      </div>
-
-
-      <fieldset>
-        <legend>Which operating system do you primarily use?</legend>
-        <input id="radio-windows" type="radio" name="operating-system" value="windows">
-        <label for="radio-windows">Windows</label><br>
-        <input id="radio-mac" type="radio" name="operating-system" value="mac">
-        <label for="radio-mac">Mac</label><br>
-        <input id="radio-linux" type="radio" name="operating-system" value="linux">
-        <label for="radio-linux">Linux</label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Which devices do you use daily?</legend>
-        <input id="device-mobile" type="checkbox" name="device" value="mobile phone">
-        <label for="device-mobile">Mobile phone</label><br>
-        <input id="device-tablet" type="checkbox" name="device" value="tablet">
-        <label for="device-tablet">Tablet</label><br>
-        <input id="device-laptop" type="checkbox" name="device" value="laptop">
-        <label for="device-laptop">Laptop</label><br>
-        <input id="device-pc" type="checkbox" name="device" value="personal computer">
-        <label for="device-pc">Personal computer</label>
-      </fieldset>
-
-      <div class="survey-item">
-        <label for="comments" id="number-label">Want to add something?</label>
-        <textarea id="comments"placeholder="Feel free to include any additional comment"></textarea>
-      </div>
-
-      <button id="submit">
-        Submit
-      </button>
-    </form>
-
-  </div>
-
-</body>
+    </div>
+  </body>
 </html>
